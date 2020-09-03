@@ -1,0 +1,9 @@
+{
+  "{src,test}/**/*.js": [
+    "eslint --fix",
+    "prettier-standard"
+  ],
+  "{src,test}/**/*.ts": [
+    "prettier-standard"
+  ]
+}
