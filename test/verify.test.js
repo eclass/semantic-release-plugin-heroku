@@ -10,10 +10,12 @@ describe('Verify', () => {
     env: {},
     logger: { log: () => ({}), error: () => ({}) }
   }
+  /** @type {import('../src/types').Config} */
+  const config = { appName: 'myapp' }
 
   it('Return SemanticReleaseError if a custom environment variable is not defined', async () => {
     try {
-      await verify({}, ctx)
+      await verify(config, ctx)
     } catch (err) {
       expect(err.name).to.equal('SemanticReleaseError')
       expect(err.code).to.equal('CUSTOMERROR')
@@ -22,6 +24,6 @@ describe('Verify', () => {
 
   it('Verify alias from a custom environmen variable', async () => {
     ctx.env = { CUSTOM_ENV: 'custom' }
-    expect(await verify({}, ctx)).to.be.a('undefined')
+    expect(await verify(config, ctx)).to.be.a('undefined')
   })
 })

@@ -1,7 +1,7 @@
 {
-  "name": "@eclass/semantic-release-custom-plugin",
+  "name": "@eclass/semantic-release-heroku-deploy",
   "version": "1.0.0",
-  "description": "semantic-release plugin to deploy app",
+  "description": "semantic-release plugin to deploy apps to heroku via api",
   "main": "src/index.js",
   "scripts": {
     "lint": "prettier-standard --lint '{src,test}/**/*.js'",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eclass/template-semantic-release-plugin.git"
+    "url": "https://github.com/eclass/semantic-release-heroku-deploy.git"
   },
   "keywords": [
     "release",
@@ -22,11 +22,12 @@
   "author": "Leonardo Gatica <lgatica@protonmail.com> (https://about.me/lgatica)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eclass/template-semantic-release-plugin/issues"
+    "url": "https://github.com/eclass/semantic-release-heroku-deploy/issues"
   },
-  "homepage": "https://github.com/eclass/template-semantic-release-plugin#readme",
+  "homepage": "https://github.com/eclass/semantic-release-heroku-deploy#readme",
   "dependencies": {
-    "@semantic-release/error": "^2.1.0"
+    "@semantic-release/error": "^2.1.0",
+    "execa": "^4.0.3"
   },
   "devDependencies": {
     "@commitlint/cli": "10.0.0",
